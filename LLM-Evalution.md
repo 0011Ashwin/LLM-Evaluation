@@ -1,0 +1,4 @@
+- Notebook `LLM-Evalution/1-RAG-evalution.ipynb` now loads LANGSMITH_API_KEY and GROQ_API_KEY from `.env`.
+- The RAG cell falls back to a deterministic local `HashEmbeddings` implementation when `OPENAI_API_KEY` is missing, so the notebook runs without OpenAI credentials.
+- `OpenAIEmbeddings()` is still used when `OPENAI_API_KEY` is available.
+- `langchain_groq` exports `ChatGroq`, not `GroqChat`; the notebook grader cell should use `ChatGroq` for Groq-backed structured outputs.
